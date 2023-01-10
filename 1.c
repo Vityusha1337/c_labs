@@ -9,6 +9,10 @@ int main(){
     scanf("%i", &a);
     printf("Enter b -> ");
     scanf("%i", &b);
+    if (a==b){
+        printf("Parameters are equal.\n");
+        return 0;
+    }
     temp_a = a;
     temp_b = b;
     while (temp_a>=1){
@@ -19,14 +23,15 @@ int main(){
         temp_b/=10;}
     if (sum_a!=sum_b){
         if (sum_a<sum_b){
-            result = ((double)sum_a)/b;
+            result = ((float)sum_a)/b;
         }
         else{
-            result = ((double)sum_b)/a;
+            result = ((float)sum_b)/a;
         }
     }
     else{
-        printf("Error. Sum of params are equal.");
+        printf("Sums of parameters are equal.");
+        return 0;
     }
     printf ("%f", result);
     return 0;
